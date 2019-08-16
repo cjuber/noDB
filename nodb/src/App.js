@@ -6,17 +6,6 @@ import Bar1 from './components/bars/barOne'
 import 'reset-css'
 class App extends Component{
 
-  constructor(){
-
-    super()
-
-    this.state = {
-      list:[],
-      todo:''
-
-    }
-  }
-
   
 
   

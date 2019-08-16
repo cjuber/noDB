@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './bar1.css'
 import axios from 'axios'
-import List from '../list/list'
+import Lists from '../list/Lists'
 
 
 
@@ -77,6 +77,7 @@ class Bar1 extends Component {
         this.setState({
             editTodo: e
         })
+        
       }
       updateItem = (id) => {
           let updatedItem = {
@@ -89,7 +90,7 @@ class Bar1 extends Component {
                 list: response.data
                 
             })
-            this.toggleEdit()
+           
         })
 
       }
@@ -111,7 +112,7 @@ class Bar1 extends Component {
 
       
             return(
-            <List key={index} list={list} deleteItem={this.deleteItem} updateItem={this.updateItem} edit={this.state.edit} text={this.state.text} toggleText= {this.toggleText} toggleEdit={this.toggleEdit} handleInput={this.handleInput}/>
+            <Lists key={index} list={list} deleteItem={this.deleteItem} updateItem={this.updateItem} edit={this.state.edit} text={this.state.text} toggleText= {this.toggleText} toggleEdit={this.toggleEdit} handleInput={this.handleInput}/>
             )
           })
 return(

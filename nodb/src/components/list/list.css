@@ -17,7 +17,7 @@
    min-width:88%;
    padding-left: 2%;
    color: white;
-   
+   font-family: 'Lexend Deca', sans-serif;
 }
 
 .icons{
@@ -35,4 +35,24 @@
 
     font-size: 19px;
     text-decoration: line-through;
+}
+.editInput{
+    width: 50%;
+    height: 20px;
+    background-color: rgba(61, 58, 58, .5);
+    color: white;
+    border-radius: 5px;
+    border: rgba(0,0,0,.08);
+    font-family: 'Lexend Deca', sans-serif;
+}
+.editBtn{
+
+    height: 20px;
+    width: 10%;
+    background-color: #3d3a3a;
+    color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-family: 'Lexend Deca', sans-serif;
 }

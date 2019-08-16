@@ -7,7 +7,8 @@ const List = (props) => {
 
      <div>
          {!props.edit ? 
-        <div className="list-container">
+
+        (<div className="list-container">
            <div className="list-container2">
             <div className="theList">
                 
@@ -21,20 +22,23 @@ const List = (props) => {
             </div>
             <br/>
         </div>
+        )
         :
-        <div className="list-container">
+        (<div className="list-container">
            <div className="list-container2">
             <div className="theList">
                 
             <p id="cursor" className="pnormal" onClick={props.toggleText}>{id}. {todo} </p>
-            <input onChange= {(e) => props.handleInput(e.target.value)}/>
-            <button onClick={() => props.updateItem(props.list.id)}>done</button>
+            <input className="editInput"onChange= {(e) => props.handleInput(e.target.value)}/>
+            <button className="editBtn" onClick={() => props.updateItem(props.list.id)}>done</button>
+            <button className="editBtn" onClick={props.toggleEdit}>Cancel</button>
             </div>
             
 
             </div>
             <br/>
         </div>
+        )
         }
 
     </div>

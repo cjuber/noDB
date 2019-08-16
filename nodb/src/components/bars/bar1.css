@@ -23,15 +23,20 @@
     color: white;
     border-radius: 5px;
     border: rgba(0,0,0,.08);
+    font-size: 16px;
+    font-family: 'Lexend Deca', sans-serif;
     
     
 }
 
 .input-item>input::placeholder{
-    color: white;
+    color: gray;
     padding-left: 15px;
     font-size: 16px;
+    font-family: 'Lexend Deca', sans-serif;
 }
+
+
 .input-item>button{
 
     height: 30px;
@@ -40,6 +45,7 @@
     color: white;
     border-radius: 5px;
     margin-left: 5px;
+    font-family: 'Lexend Deca', sans-serif;
 }
 .list{
 
@@ -58,4 +64,5 @@
     color: white;
     text-align: center;
     margin-top: 15px;
+    font-family: 'Lexend Deca', sans-serif;
 }
