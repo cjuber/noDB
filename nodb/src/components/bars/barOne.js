@@ -13,6 +13,8 @@ class Bar1 extends Component {
         this.state = {
           list:[],
           todo:'',
+          edit: false,
+          text: false,
           
             
         }
@@ -21,6 +23,21 @@ class Bar1 extends Component {
       componentDidMount(){
         this.getList()
         
+      }
+      toggleText = () =>{
+          
+        this.setState({
+            text: !this.state.text,
+                
+        })
+    } 
+
+      
+      toggleEdit = () => {
+
+        this.setState({
+            edit: !this.state.edit
+        })
       }
       getList = () => {
         
@@ -55,13 +72,24 @@ class Bar1 extends Component {
         })
       }
 
+      handleInput = (e) =>{
+
+        this.setState({
+            editTodo: e
+        })
+      }
       updateItem = (id) => {
-        axios.put(`http://localhost:8080/api/list/${id}`)
+          let updatedItem = {
+              todo: this.state.editTodo
+          }
+        axios.put(`http://localhost:8080/api/list/${id}`, updatedItem)
         .then(response => {
 
             this.setState({
                 list: response.data
+                
             })
+            this.toggleEdit()
         })
 
       }
@@ -83,7 +111,7 @@ class Bar1 extends Component {
 
       
             return(
-            <List key={index} list={list} deleteItem={this.deleteItem} updateItem={this.updateItem}/>
+            <List key={index} list={list} deleteItem={this.deleteItem} updateItem={this.updateItem} edit={this.state.edit} text={this.state.text} toggleText= {this.toggleText} toggleEdit={this.toggleEdit} handleInput={this.handleInput}/>
             )
           })
 return(
@@ -94,7 +122,7 @@ return(
              <input type="text" placeholder="Add To Do Item" value={this.state.todo}  onChange={(e) => this.setState({todo: e.target.value})}/>
              <button onClick={this.addItem}>Add</button>
             </div>
-            <div className="clickToEdit">Click on item to edit</div>
+            <div className="clickToEdit">Click on item to finish</div>
             <div className="list" >
              {mappedList}
             </div>
