@@ -1,0 +1,28 @@
+.list-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.list-container2{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.theList{
+
+   min-width:88%;
+   padding-left: 2%;
+   color: white;
+   /* text-decoration: line-through; */
+}
+
+.icons{
+
+    padding: 5px;
+    color: white;
+    
+}
