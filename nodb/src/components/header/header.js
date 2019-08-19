@@ -4,8 +4,11 @@ import './header.css'
 const Header = () =>{
 
     return(
-<div className="header-container">
+<div >
+
+    <header className="header-container">
     <h1 className="title">To Do List</h1>
+</header>
 
 
 </div>

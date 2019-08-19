@@ -7,8 +7,8 @@
 
 .bar1-container>div{
 
-    width: 38vw;
-    min-height: 100vh;
+    min-width: 45vw;
+    min-height: 80vh;
     background:#675A5A;
     
 

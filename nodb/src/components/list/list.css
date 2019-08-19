@@ -38,12 +38,13 @@
 }
 .editInput{
     width: 50%;
-    height: 20px;
+    height: 25px;
     background-color: rgba(61, 58, 58, .5);
     color: white;
     border-radius: 5px;
     border: rgba(0,0,0,.08);
     font-family: 'Lexend Deca', sans-serif;
+    font-size: 20px;
 }
 .editBtn{
 

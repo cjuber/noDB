@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import './bar1.css'
 import axios from 'axios'
 import Lists from '../list/List'
+import Footer from '../footer/Footer'
 
 
 
@@ -69,7 +70,13 @@ class Bar1 extends Component {
             list: response.data,
             todo: ''
           })
+          
         })
+        .catch((error) => {
+            console.log(error)
+      
+          })
+        
       }
 
       handleInput = (e) =>{
@@ -124,12 +131,12 @@ return(
              <button onClick={this.addItem}>Add</button>
             </div>
             <div className="clickToEdit">Click on item to finish</div>
-            <div className="list" >
+            <main className="list" >
              {mappedList}
-            </div>
+            </main>
         </div>
         
-        
+        <Footer list={this.state.list}/>
     </div>
 )
     }
