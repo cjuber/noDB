@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './bar1.css'
 import axios from 'axios'
-import Lists from '../list/Lists'
+import Lists from '../list/List'
 
 
 
